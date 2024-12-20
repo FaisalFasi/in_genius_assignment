@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
   fetchCurrentCourse,
-  setCurrentCourse,
+  //   setCurrentCourse,
 } from "../../features/currentCourseSlice";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 
@@ -22,17 +22,17 @@ const CourseDetailPage = () => {
     }
   }, [dispatch, id]);
 
-  const handleSetCourse = () => {
-    // Set the current course manually
-    dispatch(
-      setCurrentCourse({
-        id: 2,
-        title: "Manual Course",
-        description: "This is a manually set course.",
-        modules: [],
-      })
-    );
-  };
+  //   const handleSetCourse = () => {
+  //     // Set the current course manually
+  //     dispatch(
+  //       setCurrentCourse({
+  //         id: 2,
+  //         title: "Manual Course",
+  //         description: "This is a manually set course.",
+  //         modules: [],
+  //       })
+  //     );
+  //   };
 
   if (status === "loading")
     return <div className="text-center p-4">Loading course details...</div>;
