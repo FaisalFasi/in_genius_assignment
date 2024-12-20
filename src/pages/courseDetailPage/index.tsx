@@ -83,16 +83,15 @@ const CourseDetailPage = () => {
         <h1 className="text-3xl font-bold text-gray-800">{course.title}</h1>
         <p className="text-lg text-gray-600 mt-4">{course.description}</p>
       </div>
-
-      <div className="mb-6">
+      {/*  un comment the below code to add a button to set manual course */}
+      {/* <div className="mb-6">
         <button
           onClick={handleSetCourse}
           className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
         >
           Set Manual Course
         </button>
-      </div>
-
+      </div> */}
       <div className="space-y-8">
         {course.modules?.length > 0 ? (
           course.modules.map((module, idx) => (
